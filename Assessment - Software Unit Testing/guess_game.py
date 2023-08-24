@@ -77,6 +77,6 @@ class NumGuessGame:
         print("\n     ----Thanks For Playing----     ")
 
 
-if __name__ == "__main__":
-    game = NumGuessGame()
-    game.play_game()
+# Calling the functions
+game = NumGuessGame()
+game.play_game()
