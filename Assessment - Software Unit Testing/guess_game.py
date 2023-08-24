@@ -3,7 +3,8 @@ import random
 
 
 class NumGuessGame:
-    """ A number guessing game for which the player have to guess a secret 4-digit number."""
+    """ A number guessing game,
+    For which the player have to guess a secret 4-digit number."""
     def __init__(self):
         self.play_again = True
 
@@ -31,22 +32,26 @@ class NumGuessGame:
         hints = ''
         for i in range(4):
             if user_guess[i] == secret_number[i]:
-                hints += 'O'  # 'O' represents Correct digit in the correct position
+                hints += 'O'
+                # 'O' represents Correct digit in the correct position
             elif user_guess[i] in secret_number:
-                hints += 'X'  # 'X' represents Correct digit in the wrong position
+                hints += 'X'
+                # 'X' represents Correct digit in the wrong position
             else:
-                hints += '$'  # '$'represents Incorrect digit
+                hints += '$'
+                # '$'represents Incorrect digit
         return hints
 
     def play_game(self):
         """Run Guess the Number game."""
-        print("     ---- Welcome To Guess The Number Game ----   ")
+        print("\n     ---- Welcome To Guess The Number Game ----   ")
 
         while self.play_again:
             secret_number = self.generate_secret_number()
             attempts = 0
 
-            print("(A random 4-digit number has been generated. Try to guess it.)")
+            print("    (A random 4-digit number has been generated)")
+            print("\t(Your main objective is to guess it)")
 
             while True:
                 user_guess = self.get_user_input()
