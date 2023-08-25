@@ -1,4 +1,24 @@
-'''importing random function'''
+"""
+Module: guess_game.py
+
+This module defines the 'NumGuessGame' class, which represents a number guessing game.
+In this game, the player's objective
+is to guess a secret 4-digit number with no repeating digits.
+
+The game provides the following functionality:
+1. Generation of a random 4-digit secret number.
+2. Accepting user guesses, providing hints for each guess, and keeping track of attempts.
+3. Allowing the player to play the game multiple times if desired.
+
+Author: Ravneet Singh
+Date: 23/08/2023
+
+Usage:
+To play the game, run this module.
+Follow the on-screen instructions to guess the secret number.
+You can choose to play again after each round.
+"""
+
 import random
 
 
@@ -73,7 +93,6 @@ class NumGuessGame:
             # Ask if the user wants to play again.
             play_again = input("\nDo you want to play again? (yes/no): ").lower() == 'yes'
             self.play_again = play_again
-
         print("\n     ----Thanks For Playing----     ")
 
 
