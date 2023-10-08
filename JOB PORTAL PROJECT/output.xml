@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231008 21:13:28.363" rpa="false" schemaversion="4">
+<suite id="s1" name="Applicant Signin Job Apply" source="c:\Users\panesaradmin\Desktop\Study Material\PRT 582 - SOFTWARE ENGINEERING PROCESS AND TOOLS\ASSIGNMENTS\ASSESSMENT 3\JOB PORTAL PROJECT\robot\applicant testing\applicant_signin_job_apply.robot">
+<test id="s1-t1" name="Open Website" line="18">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231008 21:13:28.914" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8000/user_login'.</msg>
+<status status="PASS" starttime="20231008 21:13:28.910" endtime="20231008 21:13:31.097"/>
+</kw>
+<doc>This test case verifies that the user is able to open the URL</doc>
+<status status="PASS" starttime="20231008 21:13:28.904" endtime="20231008 21:13:31.097"/>
+</test>
+<test id="s1-t2" name="User Login" line="22">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231008 21:13:31.118" level="INFO">Typing text 'ravneet@gmail.com' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20231008 21:13:31.115" endtime="20231008 21:13:31.266"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231008 21:13:31.266" level="INFO">Typing text 'ravneet' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20231008 21:13:31.266" endtime="20231008 21:13:31.364"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:input[type=submit]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231008 21:13:31.364" level="INFO">Clicking button 'css:input[type=submit]'.</msg>
+<status status="PASS" starttime="20231008 21:13:31.364" endtime="20231008 21:13:31.850"/>
+</kw>
+<doc>Ensure a user can log in</doc>
+<status status="PASS" starttime="20231008 21:13:31.112" endtime="20231008 21:13:31.852"/>
+</test>
+<test id="s1-t3" name="Navigate to Another Page for viewing Jobs" line="29">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${ALL_JOBS}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231008 21:13:31.863" level="INFO">Opening url 'http://127.0.0.1:8000/all_jobs/'</msg>
+<status status="PASS" starttime="20231008 21:13:31.862" endtime="20231008 21:13:32.158"/>
+</kw>
+<doc>This test case navigates to another page after logging in</doc>
+<status status="PASS" starttime="20231008 21:13:31.857" endtime="20231008 21:13:32.161"/>
+</test>
+<test id="s1-t4" name="Apply for a job" line="33">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>/job_detail/7/</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231008 21:13:32.169" level="INFO">Clicking link '/job_detail/7/'.</msg>
+<status status="PASS" starttime="20231008 21:13:32.167" endtime="20231008 21:13:32.423"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>/job_apply/7/</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231008 21:13:32.427" level="INFO">Clicking link '/job_apply/7/'.</msg>
+<status status="PASS" starttime="20231008 21:13:32.425" endtime="20231008 21:13:32.529"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Date for applying has been closed</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20231008 21:13:32.529" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20231008 21:13:32.529" endtime="20231008 21:13:32.543"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>/job_detail/8/</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231008 21:13:32.548" level="INFO">Clicking link '/job_detail/8/'.</msg>
+<status status="PASS" starttime="20231008 21:13:32.545" endtime="20231008 21:13:32.700"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>/job_apply/8/</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231008 21:13:32.705" level="INFO">Clicking link '/job_apply/8/'.</msg>
+<status status="PASS" starttime="20231008 21:13:32.701" endtime="20231008 21:13:32.922"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>id=resume</arg>
+<arg>${RESUME_PATH}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20231008 21:13:32.926" level="INFO">Sending C:\Users\panesaradmin\Desktop\Study Material\PRT 582 - SOFTWARE ENGINEERING PROCESS AND TOOLS\ASSIGNMENTS\ASSESSMENT 3\JOB PORTAL PROJECT\sample_resume.pdf to browser.</msg>
+<status status="PASS" starttime="20231008 21:13:32.923" endtime="20231008 21:13:32.974"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:input[type=submit]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231008 21:13:32.974" level="INFO">Clicking button 'css:input[type=submit]'.</msg>
+<status status="PASS" starttime="20231008 21:13:32.974" endtime="20231008 21:13:33.070"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Resume Submitted Successfully</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20231008 21:13:33.072" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20231008 21:13:33.071" endtime="20231008 21:13:33.082"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>/job_detail/9/</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231008 21:13:33.087" level="INFO">Clicking link '/job_detail/9/'.</msg>
+<status status="PASS" starttime="20231008 21:13:33.085" endtime="20231008 21:13:33.245"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>/job_apply/9/</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231008 21:13:33.251" level="INFO">Clicking link '/job_apply/9/'.</msg>
+<status status="PASS" starttime="20231008 21:13:33.248" endtime="20231008 21:13:33.391"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Date for applying has not yet started</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20231008 21:13:33.395" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20231008 21:13:33.393" endtime="20231008 21:13:33.405"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231008 21:13:33.407" endtime="20231008 21:13:35.656"/>
+</kw>
+<doc>This test case applies a job</doc>
+<status status="PASS" starttime="20231008 21:13:32.165" endtime="20231008 21:13:35.656"/>
+</test>
+<status status="PASS" starttime="20231008 21:13:28.383" endtime="20231008 21:13:35.656"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Applicant Signin Job Apply">Applicant Signin Job Apply</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
