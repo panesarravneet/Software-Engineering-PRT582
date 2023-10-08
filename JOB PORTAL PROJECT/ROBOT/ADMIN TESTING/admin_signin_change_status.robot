@@ -33,9 +33,9 @@ Change status of a company
     Click Button    css:input[type=submit]
     Alert Should Be Present  Status changed successfully.
 
-#Delete User   
-    #Go To    ${APPLICANTS_URL}
-    #Title Should Be  All Applicants
-    #Click Link    ${DELETE}
-    #Alert Should Be Present  Are you sure you want to delete this applicant?
+Delete User   
+    Go To    ${APPLICANTS_URL}
+    Title Should Be  All Applicants
+    Click Link    ${DELETE}
+    Alert Should Be Present  Are you sure you want to delete this applicant?
     Close Browser
